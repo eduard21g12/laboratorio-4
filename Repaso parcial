@@ -1,0 +1,40 @@
+int variable1 = 100;
+int variable2 = 5;
+int resultadoSuma;
+
+void setup() {
+  size(1000, 1000);
+}
+
+void draw() {
+  background(#B90000);
+  sumar();
+  fill(#FFFCFC);
+  ellipse(mouseX+230, mouseY+300, 100, 100);
+  fill(#FFFCFC);
+  ellipse(mouseX, mouseY, 100, 100);
+  fill(#5A5FDE);
+  rect(2, variable1, 30, 500);
+  fill(#5A5FDE);
+  rect(200, variable1, 30, 500);
+  fill(#5A5FDE);
+  rect(400, variable1, 30, 500);
+  fill(#5A5FDE);
+  rect(600, variable1, 30, 500);
+  fill(#5A5FDE);
+  rect(800, variable1, 30, 500);
+  rect(970, variable1, 30, 500);
+  if (variable1==1000) {
+    variable1=0;
+  }
+}
+
+int sumar() {
+  //codigo de la función
+  resultadoSuma=variable1+variable2;
+  variable1+=10;   //variable1=variable1+20;
+  variable2+=10;   //variable2=variable2+20;
+  //println(resultadoSuma);
+  println(mouseX, mouseY);
+  return 0;
+}
