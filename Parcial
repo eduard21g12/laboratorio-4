@@ -1,0 +1,22 @@
+int linea = 10;
+float posX, posY; 
+float speedX = 2;
+float speedY = 1;
+void setup (){
+ size(600,600);
+  posX = width / 2; 
+  posY = height / 2;
+}
+void draw (){
+  background(255);
+  int linea=10;
+  fill(#FFFFFF);
+  line(mouseX+20,mouseY+20,300,200);
+  point(10,30);
+  point(50,30);
+  rect(60,posY,120,150);
+  ellipse(posX,posY,130,190);
+  linea=linea+4;
+  posX += speedX;
+  posY += speedY;
+}
