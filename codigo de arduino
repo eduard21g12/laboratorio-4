@@ -1,0 +1,43 @@
+int ledPin1 = 3;
+int ledPin2 = 4;
+int ledPin3 = 5;
+int ledPin4 = 6;
+
+void setup() {
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char estadoMonitor = Serial.read();
+    if (estadoMonitor == '1') {
+      digitalWrite(ledPin1, HIGH);
+      Serial.println("LED1 encendido");
+    } else if (estadoMonitor == '2') {
+      digitalWrite(ledPin2, HIGH);
+      Serial.println("LED2 encendido");
+    } else if (estadoMonitor == '3') {
+      digitalWrite(ledPin3, HIGH);
+      Serial.println("LED3 encendido");
+    } else if (estadoMonitor == '4') {
+      digitalWrite(ledPin4, HIGH);
+      Serial.println("LED4 encendido");
+    } else if (estadoMonitor == '5') {
+      digitalWrite(ledPin1, LOW);
+      Serial.println("LED1 apagado");
+    } else if (estadoMonitor == '6') {
+      digitalWrite(ledPin2, LOW);
+      Serial.println("LED2 apagado");
+    } else if (estadoMonitor == '7') {
+      digitalWrite(ledPin3, LOW);
+      Serial.println("LED3 apagado");
+    } else if (estadoMonitor == '8') {
+      digitalWrite(ledPin4, LOW);
+      Serial.println("LED4 apagado");
+    }
+  }
+}
